@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'board';
+  constructor(private toaster:ToastrService){
+
+  }
+  title = 'I am a mean stack developer';
+  sub(na:string){
+    alert(na)
+  }
+  submit(){
+    this.toaster.error("error","")
+  }
 }
